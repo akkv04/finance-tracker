@@ -1,0 +1,14 @@
+[
+  {
+    "amount": 42.5,
+    "category": "groceries",
+    "date": "2026-06-22",
+    "description": "Trader Joe's"
+  },
+  {
+    "amount": 100,
+    "category": "grocery",
+    "date": "2026-05-03",
+    "description": "food items"
+  }
+]
