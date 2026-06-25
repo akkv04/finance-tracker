@@ -8,5 +8,5 @@ def save_transaction(tran:list, filepath:str):
 
 def load_transaction(filepath:str):
     with open(filepath,"r") as f:
-        ouptut= json.load(f)
-        print (ouptut)
+        output= json.load(f)
+    return [Transaction(**d) for d in output]
