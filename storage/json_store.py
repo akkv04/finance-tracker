@@ -7,6 +7,9 @@ def save_transaction(tran:list, filepath:str):
         json.dump(data, f, indent=2)
 
 def load_transaction(filepath:str):
-    with open(filepath,"r") as f:
-        output= json.load(f)
+    try:
+        with open(filepath,"r") as f:
+            output= json.load(f)
+    except FileNotFoundError:
+        return []
     return [Transaction(**d) for d in output]

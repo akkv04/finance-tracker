@@ -17,3 +17,8 @@ def test_save_load_roundtrip(tmp_path):
     assert loaded[0].amount == 50.0
     assert loaded[1].category == "coffee"
     assert loaded[1].amount == 12.0
+
+
+def test_load_missing_file_returns_empty_list(tmp_path):
+    missing_path = tmp_path / "does_not_exist.json"
+    assert load_transaction(str(missing_path)) == []
